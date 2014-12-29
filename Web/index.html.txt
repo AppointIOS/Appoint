@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Appoint.</title>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,400' rel='stylesheet' type='text/css'>	
+		<style>
+		</style>
+	</head>
+	<body>
+		<img></img>
+		<div id="Login_Panel"></div> 
+			<img class="icon"><input type="text" placeholder="Username" name="username">
+			<img class="icon"><input type="password" placeholder="Password" name="password">
+			<button 
+		<div id="Registration"></div>
+	</body>
+</html>
