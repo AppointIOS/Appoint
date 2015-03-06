@@ -1,0 +1,12 @@
+
+html {
+    background: url('stars.jpg') no-repeat fixed center;          
+    }
+            
+#LogoWrapper {
+               
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 150px;
+    }
