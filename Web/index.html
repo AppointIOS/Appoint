@@ -8,11 +8,13 @@
         <link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
-        <div id="logoWrapper"><img id="logo" src="paper_logo.svg"></div>
-		<div id="loginPanel"></div>
-            <img class="icon"><input type="text" placeholder="Username" name="username">		  
-            <img class="icon"><input type="password" placeholder="Password" name="password">
-			<button id="loginButton">Login</button>
-		<div id="registration"></div>
+        <div id="logoWrapper">
+            <img id="logo" src="paper_logo.svg">
+        </div>
+		<form id="loginPanel">
+            <img class="icon"><input id="usernameField" class="loginField shadow" type="text" name="username" placeholder="Username or E-mail">		  
+            <img class="icon"><input id="passwordField" class="loginField shadow" type="password" name="password" placeholder="Password">
+			<button id="loginButton" class="shadow">Login</button>
+        </form>
 	</body>
 </html>
