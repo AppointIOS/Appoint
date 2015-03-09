@@ -10,19 +10,33 @@
 	</head>
     
     <script>
+        var menuToggled = false;
+        
         function activateMenu() {
-            
+            document.getElementById("sidebarWrapper").style.visibility = "visible";
+            menuToggled = true;
+        }
+        
+        function deactivateMenu() {
+            document.getElementById("sidebarWrapper").style.visibility = "hidden";
+            menuToggled = false;
         }
     </script>
     
 	<body>
-        <div id="headerBar">
-            <img id="logo" src="logo.svg">
-            <svg id="outerCircle" height="100" width="100" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <circle id="innerCircle" cx="25" cy="25" r="50%" stroke="white" stroke-width="7" fill="#ff5f00"/>
-            </svg>
+        <div id="content" class="noBlur">
+            <div id="headerBar" class="shadow">
+                <img id="logo" src="logo.svg">
+                <div id="circle" onclick="activateMenu();"></div>
+            </div>
         </div>
         
+        <div id="sidebarWrapper">
+            <div id="sidebar" class="shadow">
+            
+            </div>
+            <div id="sidebarRight" onclick="deactivateMenu();"></div>
+        </div>
     
 	</body>
 </html>
