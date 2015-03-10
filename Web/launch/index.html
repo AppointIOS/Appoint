@@ -9,10 +9,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	</head>
     
+    <script>
+        var flashingState = false;
+        
+        function flashing() {
+            if (flashingState == true) {
+                document.getElementById("loading").style.opacity = "0";
+            } else {
+                document.getElementById("loading").style.opacity = "1";
+            }
+        }
+        
+        setInterval(
+            function flashing() {
+                if (flashingState == true) {
+                    document.getElementById("loading").style.opacity = "0";
+                    flashingState = false;
+                } else {
+                    document.getElementById("loading").style.opacity = "1";
+                    flashingState = true;
+                }
+            }, 2500);
+    
+    </script>
+    
 	<body>
         <div id="wrapper">
-            <img src="http://127.0.0.1:64590/web/paper_logo.svg">
-            <h1>Loading...</h1>
+            <img src="paper_logo.svg">
+            <h1 id="loading">Loading</h1>
         </div>
         
         <div id="footer">

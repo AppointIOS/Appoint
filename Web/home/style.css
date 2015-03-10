@@ -72,14 +72,15 @@ body {
 #sidebarWrapper {
     background-color: rgba(0, 0, 0, 0.5);
     
+    -webkit-transition: opacity 0.1s; /* Safari */
+    transition: opacity 0.1s;
+    
     position: absolute;
     
     z-index: 4;
     
     height: 100%;
     width: 100%;
-    
-    visibility: hidden;
 }
 
 #sidebarWrapper:hover {
@@ -107,6 +108,9 @@ body {
     z-index: 5;
 
     background-color: white;
+    
+    -webkit-transition: left 0.1s; /* Safari */
+    transition: left 0.1s;
 }
 
 #sidebar:hover {

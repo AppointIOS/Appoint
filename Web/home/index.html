@@ -8,17 +8,23 @@
         <link href="style.css" rel="stylesheet" type="text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	</head>
-    
+
     <script>
         var menuToggled = false;
         
         function activateMenu() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementById("sidebarWrapper").style.opacity = "1";
+            document.getElementById("sidebarRight").style.visibility = "visible";
             document.getElementById("sidebarWrapper").style.visibility = "visible";
             menuToggled = true;
         }
         
         function deactivateMenu() {
-            document.getElementById("sidebarWrapper").style.visibility = "hidden";
+            document.getElementById("sidebar").style.left = "-70vw";
+            document.getElementById("sidebarWrapper").style.opacity = "0";
+            document.getElementById("sidebarRight").style.visibility = "hidden";
+            setTimeout(function(){ document.getElementById("sidebarWrapper").style.visibility = "hidden"; }, 100);
             menuToggled = false;
         }
     </script>
