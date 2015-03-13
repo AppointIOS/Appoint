@@ -81,6 +81,8 @@ body {
     
     height: 100%;
     width: 100%;
+    
+    visibility: hidden;
 }
 
 #sidebarWrapper:hover {
@@ -106,6 +108,8 @@ body {
     width: 70%;
     
     z-index: 5;
+    
+    left: -70vw;
 
     background-color: white;
     
@@ -114,4 +118,51 @@ body {
 }
 
 #sidebar:hover {
+}
+
+#pageContent {
+    z-index: 4;
+    color: gray;;
+    position: absolute;
+    margin: 0px;
+    padding: 2vh;
+    bottom: 0;
+    height: 88vh;
+    overflow: scroll;
+    width: calc(100% - 4vh);
+}
+
+#upcomingEvents {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+.upcomingEventTable {
+    margin: 0px;
+    padding: 0px;
+    color: #ff5f00;
+    font-size: 5vw;
+    border-collapse: collapse;
+    width: calc(100% - 4vh);
+}
+
+.upcomingEventItem {
+    
+}
+
+.upcomingEventItem {
+    border: 2px solid #ff5f00;
+    border-radius: 0px;
+    text-align: left;
+}
+
+.upcomingEventTime {
+    text-align: right;
 }
