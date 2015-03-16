@@ -33,17 +33,29 @@
         <div id="content">
             <div id="headerBar" class="shadow">
                 <img id="logo" src="logo.svg">
-                <div id="circle" onclick="activateMenu();"></div>
+                
+                <img id="menuArrow" src="icons/caret-right.svg" onclick="activateMenu();">
             </div>
             
             <div id="pageContent">
                 <div id="upcomingEvents">
+                    
                     <h1>Upcoming Events:</h1>
                     
-                    <table class="upcomingEventTable">
-                        <tr class="upcomingEventItem">
+                    <table id="upcomingEventTable">
+                        <tr onclick="javascript:location.href='http://google.com'">
                             <td class="upcomingEventName">Let the dogs out</td>
                             <td class="upcomingEventTime">15:04 - 16:45</td>
+                        </tr>
+                        <tr height="5vh"></tr>
+                        <tr>
+                            <td class="upcomingEventName">Schaken met Gerard</td>
+                            <td class="upcomingEventTime">18:01 - 20:32</td>
+                        </tr>
+                        <tr height="5vh"></tr>
+                        <tr>
+                            <td class="upcomingEventName">Inspecteren van tafels</td>
+                            <td class="upcomingEventTime">21:12 - 21:29</td>
                         </tr>
                     </table>
                 </div>
@@ -52,7 +64,13 @@
         
         <div id="sidebarWrapper">
             <div id="sidebar" class="shadow">
-            
+                <table id="navigationList">
+                    <tr><td><img class="menuIcon" src="icons/home.svg">Home</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/calendar.svg">Agenda</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/people.svg">Friends</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/heart.svg">Events</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/question-mark.svg">Contact</td></tr>
+                </table>
             </div>
             <div id="sidebarRight" onclick="deactivateMenu();"></div>
         </div>

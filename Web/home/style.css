@@ -41,20 +41,16 @@ body {
     top: 0;
 }
 
-#circle {
-    height: 4.5vh;
-    width: 4.5vh;
+#menuArrow {
+    height: 5vh;
+    width: 5vh;
     display: block;
-    margin-top: 0.75vh;
-    margin-left: 0.75vh;
+    margin-top: 1.5vh;
+    margin-left: 1.5vh;
     position: absolute;
-    border-radius: 50%;
-    
-    border: 1vh solid white;
 }
 
-#circle:hover {
-    background-color: white;
+#menuArrow:hover {
     cursor: pointer;
 }
 
@@ -111,7 +107,8 @@ body {
     
     left: -70vw;
 
-    background-color: white;
+    background-color: #292929;
+    color: white;
     
     -webkit-transition: left 0.1s; /* Safari */
     transition: left 0.1s;
@@ -132,6 +129,36 @@ body {
     width: calc(100% - 4vh);
 }
 
+#navigationList {
+    width: 100%;
+    margin: 0px;
+    padding: 2vh;
+    font-size: 4vh;
+    border-collapse: collapse;
+}
+
+#navigationList tr td {
+    padding: 1vh;
+    padding-top: 2vh;
+    padding-left: 2vh;
+    border-bottom: 1px #383838 solid;
+    font-weight: lighter;
+}
+
+#navigationList tr td:hover {
+    cursor: pointer;
+}
+
+.menuIcon {
+    height: 80%;
+    margin-right: 2vh;
+}
+
+
+
+
+
+
 #upcomingEvents {
     padding: 0px;
     margin: 0px;
@@ -142,9 +169,10 @@ h1 {
     padding: 0px;
     text-decoration: none;
     font-weight: lighter;
+    margin-bottom: 2vh;
 }
 
-.upcomingEventTable {
+#upcomingEventTable {
     margin: 0px;
     padding: 0px;
     color: #ff5f00;
@@ -153,11 +181,12 @@ h1 {
     width: 100%;
 }
 
-.upcomingEventItem {
-    
+.upcomingEventName {
+    padding: 1vh;
+    padding-top: 1.5vh;
 }
 
-.upcomingEventItem {
+#upcomingEventTable tr {
     border: 2px solid #ff5f00;
     border-radius: 0px;
     text-align: left;
@@ -165,4 +194,6 @@ h1 {
 
 .upcomingEventTime {
     text-align: right;
+    padding: 1vh;
+    padding-top: 1.5vh;
 }
