@@ -14,7 +14,7 @@ body {
     margin: 0px;
     padding: 0px;
     
-    font-family: "Josefin Sans";
+    font-family: "Roboto";
     
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -139,8 +139,9 @@ body {
 
 #navigationList tr td {
     padding: 1vh;
-    padding-top: 2vh;
+    padding-top: 1vh;
     padding-left: 2vh;
+    font-size: 8vw;
     border-bottom: 1px #383838 solid;
     font-weight: lighter;
 }
@@ -150,7 +151,7 @@ body {
 }
 
 .menuIcon {
-    height: 80%;
+    height: 5.5vw;
     margin-right: 2vh;
 }
 
@@ -168,7 +169,7 @@ h1 {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
-    font-weight: lighter;
+    font-weight: 400;
     margin-bottom: 2vh;
 }
 
