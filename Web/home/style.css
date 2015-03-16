@@ -150,7 +150,7 @@ h1 {
     color: #ff5f00;
     font-size: 5vw;
     border-collapse: collapse;
-    width: calc(100% - 4vh);
+    width: 100%;
 }
 
 .upcomingEventItem {
