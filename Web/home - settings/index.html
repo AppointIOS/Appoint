@@ -41,39 +41,27 @@
                 <div id="settingsContent">
                     
                     <script>
-                        var muchAppointYes = true;
-                        var noMailYesNo = false;
-                        var niceBootonYes = true;
+                        var setting1 = {isTrue:true, settingId:"1"};
+                        var setting2 = {isTrue:true, settingId:"2"};
+                        var setting3 = {isTrue:true, settingId:"3"};
+                        var setting4 = {isTrue:true, settingId:"4"};
+                        var setting5 = {isTrue:true, settingId:"5"};
                         
-                        function toggleSetting() {
-                            var nodes = document.getElementById('ID_of_parent').childNodes;
-                            for(var i=0; i<nodes.length; i++) {
-                                if (nodes[i].nodeName.toLowerCase() == 'div') {
-                                     nodes[i].style.background = color;
-                                 }
+                        function toggleSetting(selSetting) {
+                            if (selSetting.isTrue == true) {
+                                document.getElementById(selSetting.settingId).className += " toggleSettingTrue";
+                                selSetting.isTrue = false;
+                            } else {
+                                document.getElementById(selSetting.settingId).className = document.getElementById(selSetting.settingId).className.replace
+      ( /(?:^|\s)toggleSettingTrue(?!\S)/g , '' );
+                                selSetting.isTrue = true;
                             }
-                        }
-                        
-                        function settingTrue() {
-                            document.getElementById("sidebar").style.left = "0";
-                            document.getElementById("sidebarWrapper").style.opacity = "1";
-                            document.getElementById("sidebarRight").style.visibility = "visible";
-                            document.getElementById("sidebarWrapper").style.visibility = "visible";
-                            muchAppointYes = true;
-                        }
-
-                        function settingFalse() {
-                            document.getElementById("sidebar").style.left = "-70vw";
-                            document.getElementById("sidebarWrapper").style.opacity = "0";
-                            document.getElementById("sidebarRight").style.visibility = "hidden";
-                            setTimeout(function(){ document.getElementById("sidebarWrapper").style.visibility = "hidden"; }, 100);
-                            muchAppointYes = false;
                         }
                     </script>
                     
-                    <h2>General settings</h2><br>
+                    <h2>General</h2><br>
                     Much Appoint yes yes?
-                    <div class="toggleSetting" onclick="">
+                    <div id="1" class="toggleSetting" onclick="toggleSetting(setting1);">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
                         <div class="settingDisplay"></div>
@@ -82,7 +70,7 @@
                     <br><br>
                     
                     No mail yes no?
-                    <div class="toggleSetting">
+                    <div id="2" class="toggleSetting" onclick="toggleSetting(setting2);">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
                         <div class="settingDisplay"></div>
@@ -91,7 +79,27 @@
                     <br><br>
                     
                     Nice booton yes?
-                    <div class="toggleSetting">
+                    <div id="3" class="toggleSetting" onclick="toggleSetting(setting3);">
+                        <img src="toggles_yes.svg">
+                        <img class="toggleNo" src="toggles_no.svg">
+                        <div class="settingDisplay"></div>
+                    </div>
+                    
+                    <br><br>
+                    
+                    <h2>Social</h2><br>
+                    
+                    Share Facebook yes?
+                    <div id="4" class="toggleSetting" onclick="toggleSetting(setting4);">
+                        <img src="toggles_yes.svg">
+                        <img class="toggleNo" src="toggles_no.svg">
+                        <div class="settingDisplay"></div>
+                    </div>
+                    
+                    <br><br>
+                    
+                    Do Twitter no?
+                    <div id="5" class="toggleSetting" onclick="toggleSetting(setting5);">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
                         <div class="settingDisplay"></div>

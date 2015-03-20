@@ -207,6 +207,10 @@ p {
     transition: margin-left 0.1s;
 }
 
+.toggleSettingTrue div {
+    margin-left: 0px !important;
+}
+
 .toggleSetting img {
     height: 2vh;
     padding: 0px;
