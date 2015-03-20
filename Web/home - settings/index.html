@@ -45,7 +45,16 @@
                         var noMailYesNo = false;
                         var niceBootonYes = true;
                         
-                        function activateMenu() {
+                        function toggleSetting() {
+                            var nodes = document.getElementById('ID_of_parent').childNodes;
+                            for(var i=0; i<nodes.length; i++) {
+                                if (nodes[i].nodeName.toLowerCase() == 'div') {
+                                     nodes[i].style.background = color;
+                                 }
+                            }
+                        }
+                        
+                        function settingTrue() {
                             document.getElementById("sidebar").style.left = "0";
                             document.getElementById("sidebarWrapper").style.opacity = "1";
                             document.getElementById("sidebarRight").style.visibility = "visible";
@@ -53,7 +62,7 @@
                             muchAppointYes = true;
                         }
 
-                        function deactivateMenu() {
+                        function settingFalse() {
                             document.getElementById("sidebar").style.left = "-70vw";
                             document.getElementById("sidebarWrapper").style.opacity = "0";
                             document.getElementById("sidebarRight").style.visibility = "hidden";
@@ -67,7 +76,7 @@
                     <div class="toggleSetting" onclick="">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
-                        <div></div>
+                        <div class="settingDisplay"></div>
                     </div>
                     
                     <br><br>
@@ -76,7 +85,7 @@
                     <div class="toggleSetting">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
-                        <div></div>
+                        <div class="settingDisplay"></div>
                     </div>
                     
                     <br><br>
@@ -85,7 +94,7 @@
                     <div class="toggleSetting">
                         <img src="toggles_yes.svg">
                         <img class="toggleNo" src="toggles_no.svg">
-                        <div></div>
+                        <div class="settingDisplay"></div>
                     </div>
                 </div>
             </div>
