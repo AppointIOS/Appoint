@@ -1,0 +1,51 @@
+#maandCalender tr td {
+    border: 1px gray solid;
+}
+
+#maandCalender {
+    width: 98vw;
+    padding: 0px;
+    margin: 0px;
+    cellspacing: 1vw;
+}
+
+#maandCalender tr .currentDate { 
+    border: 1px #ff5f00 solid !important;
+    color: #ff5f00;
+}
+
+#maandCalender tr .selectedDate {
+    background-color: #ff5f00;
+    color: white;
+}
+
+#maandCalender tr .nextMonth {
+    background-color: gray;
+    color: white;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 5vh;
+    color: #ff5f00;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.floatRight {
+    float: right;
+    height: 5vh;
+    display: inline-block;
+    margin: 0px;
+}
+
+.floatLeft {
+    float: left;
+    height: 5vh;
+    display: inline-block;
+    margin: 0px;
+}
+
+
+/* Nu wil ik een functie (script) creeeren waarin ik .currentDate via JavaScript ook echt de currentdate maak. Ook ga ik nog meer maanden aanmaken die allemaal gedisplayed kunnen worden. */ 
