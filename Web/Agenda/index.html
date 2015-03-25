@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Appoint.</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	</head>
+
+    <script>
+        var menuToggled = false;
+    
+        function activateMenu() {
+            document.getElementById("sidebar").style.left = "0";
+            document.getElementById("sidebarWrapper").style.opacity = "1";
+            document.getElementById("sidebarRight").style.visibility = "visible";
+            document.getElementById("sidebarWrapper").style.visibility = "visible";
+            menuToggled = true;
+        }
+        
+        function deactivateMenu() {
+            document.getElementById("sidebar").style.left = "-70vw";
+            document.getElementById("sidebarWrapper").style.opacity = "0";
+            document.getElementById("sidebarRight").style.visibility = "hidden";
+            setTimeout(function(){ document.getElementById("sidebarWrapper").style.visibility = "hidden"; }, 100);
+            menuToggled = false;
+        }
+    </script>
+    
+	<body>
+        <div id="content">
+            <div id="headerBar" class="shadow">
+                <img id="logo" src="logo.svg">
+                
+                <img id="menuArrow" src="icons/caret-right.svg" onclick="activateMenu();">
+            </div>
+            
+            <div id="pageContent">
+                <div id="upcomingEvents">
+                    
+                    <h1>Upcoming Events:</h1>
+                    
+                    <table id="upcomingEventTable">
+                        <tr onclick="javascript:location.href='http://google.com'">
+                            <td class="upcomingEventName">Let the dogs out</td>
+                            <td class="upcomingEventTime">15:04 - 16:45</td>
+                        </tr>
+                        <tr height="5vh"></tr>
+                        <tr>
+                            <td class="upcomingEventName">Schaken met Gerard</td>
+                            <td class="upcomingEventTime">18:01 - 20:32</td>
+                        </tr>
+                        <tr height="5vh"></tr>
+                        <tr>
+                            <td class="upcomingEventName">Inspecteren van tafels</td>
+                            <td class="upcomingEventTime">21:12 - 21:29</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sidebarWrapper">
+            <div id="sidebar" class="shadow">
+                <table id="navigationList">
+                    <tr><td><img class="menuIcon" src="icons/house204.svg">Home</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/calendar194.svg">Agenda</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/smiley3.svg">Friends</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/heart373.svg">Events</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/phone14.svg">Contact</td></tr>
+                    <tr><td><img class="menuIcon" src="icons/gear40.svg">Settings</td></tr>
+                </table>
+            </div>
+            <div id="sidebarRight" onclick="deactivateMenu();"></div>
+        </div>
+    
+	</body>
+</html>
